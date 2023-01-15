@@ -1,6 +1,7 @@
 import About from "./components/about/About";
 import Footer from "./components/footer/Fotter";
 import Skills from "./components/skills/Skills";
+import ScrollUp from "./components/scrollup/ScrollUp";
 import "./App.css";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <About />
       <Skills />
       <Footer />
+      <ScrollUp />
     </>
   );
 }
