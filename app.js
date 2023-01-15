@@ -12,20 +12,38 @@
 
 const inputText = document.querySelector(".inputTipeText");
 const addButton = document.querySelector(".addButton");
+const deleteButton = document.querySelector(".deleteButton");
+const deleteAllButton = document.querySelector(".deleteAllButton");
 const addText = document.querySelector(".addText");
 
 let inner = [];
 
 let areLocalStorage = JSON.parse(localStorage.getItem("miGato"));
-console.log(areLocalStorage);
+
+if (areLocalStorage) {
+  inner = areLocalStorage;
+  print();
+}
 
 addButton.addEventListener("click", function () {
   //
   inner.push(inputText.value);
   print();
-  // local Storage:
-  localStorage.setItem("miGato", JSON.stringify(inner));
+  saveLocalStorage();
   inputText.value = "";
+});
+
+deleteButton.addEventListener("click", function () {
+  console.log(inner);
+  inner.pop();
+  saveLocalStorage();
+  print();
+});
+
+deleteAllButton.addEventListener("click", function () {
+  localStorage.clear();
+  inner = [];
+  print();
 });
 
 function print() {
@@ -36,4 +54,9 @@ function print() {
   }
 
   addText.innerHTML = printDom;
+}
+
+function saveLocalStorage() {
+  // local Storage:
+  localStorage.setItem("miGato", JSON.stringify(inner));
 }
