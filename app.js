@@ -12,7 +12,13 @@
 
 const inputText = document.querySelector(".inputTipeText");
 const addButton = document.querySelector(".addButton");
+const addText = document.querySelector(".addText");
+
+let inner = [];
 
 addButton.addEventListener("click", function () {
-  console.log("clicked");
+  inner.push = inputText.value;
+
+  // addText.innerHTML = "<h2>hola</h2>";
+  addText.innerHTML = `<h2>${inner.values}</h2>`;
 });
