@@ -17,11 +17,15 @@ const addText = document.querySelector(".addText");
 let inner = [];
 
 addButton.addEventListener("click", function () {
+  //
   inner.push(inputText.value);
 
-  // addText.innerHTML = "<h2>hola</h2>";
-  addText.innerHTML = `<h2>${inner}</h2>`;
-  console.log(inner);
-  console.log(inner.push);
+  let printDom = "";
+
+  for (let i = 0; i < inner.length; i++) {
+    printDom = `<h2>${inner}</h2>`;
+  }
+
+  addText.innerHTML = `<h2>${printDom}</h2>`;
   inputText.value = "";
 });
