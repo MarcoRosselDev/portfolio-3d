@@ -16,16 +16,24 @@ const addText = document.querySelector(".addText");
 
 let inner = [];
 
+let areLocalStorage = JSON.stringify(localStorage.getItem("miGato"));
+console.log(areLocalStorage);
+
 addButton.addEventListener("click", function () {
   //
   inner.push(inputText.value);
+  // local Storage:
+  localStorage.setItem("miGato", JSON.parse(inner));
+  print();
+});
 
+function print() {
   let printDom = "";
 
   for (let i = 0; i < inner.length; i++) {
-    printDom = `<h2>${inner}</h2>`;
+    printDom += `<h2>${inner[i]}</h2>`;
   }
 
-  addText.innerHTML = `<h2>${printDom}</h2>`;
+  addText.innerHTML = printDom;
   inputText.value = "";
-});
+}
