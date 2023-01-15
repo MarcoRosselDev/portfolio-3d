@@ -3,7 +3,18 @@ body {
   display: flex;
   width: 100vh;
   height: 100%;
+  background-color: black;
+  color: antiquewhite;
 }
 section {
   justify-content: center;
+}
+
+button {
+  height: 35px;
+  border-radius: 5px;
+}
+
+input {
+  height: 30px;
 }
