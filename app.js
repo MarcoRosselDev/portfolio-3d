@@ -16,15 +16,16 @@ const addText = document.querySelector(".addText");
 
 let inner = [];
 
-let areLocalStorage = JSON.stringify(localStorage.getItem("miGato"));
+let areLocalStorage = JSON.parse(localStorage.getItem("miGato"));
 console.log(areLocalStorage);
 
 addButton.addEventListener("click", function () {
   //
   inner.push(inputText.value);
-  // local Storage:
-  localStorage.setItem("miGato", JSON.parse(inner));
   print();
+  // local Storage:
+  localStorage.setItem("miGato", JSON.stringify(inner));
+  inputText.value = "";
 });
 
 function print() {
@@ -35,5 +36,4 @@ function print() {
   }
 
   addText.innerHTML = printDom;
-  inputText.value = "";
 }
