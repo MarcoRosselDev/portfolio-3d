@@ -1,7 +1,12 @@
+import About from "./components/about/About";
 import "./App.css";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <>
+      <About />
+    </>
+  );
 }
 
 export default App;
