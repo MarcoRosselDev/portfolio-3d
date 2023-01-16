@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import About from "./components/about/About";
 import Footer from "./components/footer/Fotter";
 import Skills from "./components/skills/Skills";
+import Contact from "./components/contact/Contact";
 import ScrollUp from "./components/scrollup/ScrollUp";
 import "./App.css";
 
@@ -215,7 +216,7 @@ function App() {
         <About mode={dark} />
         <Skills mode={dark} />
         {/* <Portfolio mode={dark} /> */}
-        {/* <Contact mode={dark} /> */}
+        <Contact mode={dark} />
       </main>
 
       <Footer mode={dark} />
