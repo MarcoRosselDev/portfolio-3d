@@ -19,6 +19,10 @@ addButton.addEventListener("click", function () {
   listArray.push(inputText.value);
   inputText.value = "";
 
+  print();
+});
+
+function print() {
   let printDOM = "";
 
   for (let i = 0; i < listArray.length; i++) {
@@ -26,4 +30,4 @@ addButton.addEventListener("click", function () {
   }
 
   list.innerHTML = printDOM;
-});
+}
