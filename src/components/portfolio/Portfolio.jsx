@@ -14,14 +14,6 @@ const Portfolio = (dark) => {
           <ProjectTwo />
         </div>
       </div>
-      <div className="qwe">
-        <button
-          className="button button--flex button-projects"
-          rel="noopener noreferrer"
-        >
-          See All Projects
-        </button>
-      </div>
     </div>
   );
 };
