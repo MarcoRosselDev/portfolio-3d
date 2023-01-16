@@ -19,6 +19,9 @@ const Portfolio = (dark) => {
               <div className="portfolio__container portfolio__content" key={id}>
                 <h2>{title}</h2>
                 <p>{descriptions}</p>
+                <button className="button" href={link} target="_blank">
+                  see project
+                </button>
               </div>
             );
           })}
