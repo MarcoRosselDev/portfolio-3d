@@ -14,13 +14,20 @@ const deleteAll = document.querySelector(".deleteAll");
 const list = document.querySelector(".list");
 
 let listArray = [];
+const areLocalStorage = JSON.parse(localStorage.getItem("reminder"));
+
+if (areLocalStorage) {
+  listArray = areLocalStorage;
+  print();
+}
 
 addButton.addEventListener("click", function () {
   listArray.push(inputText.value);
   inputText.value = "";
-
+  localStorage.setItem("reminder", JSON.stringify(listArray));
   print();
 });
+console.log(localStorage);
 
 function print() {
   let printDOM = "";
