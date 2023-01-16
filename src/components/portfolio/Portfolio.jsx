@@ -10,8 +10,12 @@ const Portfolio = (dark) => {
         <h2 className="section__title">Portfolio</h2>
         <span className="section__subtitle">Last Projects</span>
         <div className="portfolio__container  grid">
-          <ProjectOne />
-          <ProjectTwo />
+          <div className="portfolio__container portfolio__content">
+            <h1>hola</h1>
+          </div>
+          <div className="portfolio__container portfolio__content">
+            <h1>hola</h1>
+          </div>
         </div>
       </div>
     </div>
