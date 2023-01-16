@@ -27,7 +27,17 @@ addButton.addEventListener("click", function () {
   localStorage.setItem("reminder", JSON.stringify(listArray));
   print();
 });
-console.log(localStorage);
+
+deleteAll.addEventListener("click", function () {
+  localStorage.clear();
+  listArray = [];
+  print();
+});
+
+deleteButton.addEventListener("click", function () {
+  listArray.pop();
+  print();
+});
 
 function print() {
   let printDOM = "";
