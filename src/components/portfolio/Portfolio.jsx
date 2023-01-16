@@ -16,8 +16,8 @@ const Portfolio = (dark) => {
               projects;
 
             return (
-              <div className="portfolio__container portfolio__content">
-                <h1>{title}</h1>
+              <div className="portfolio__container portfolio__content" key={id}>
+                <h2>{title}</h2>
                 <p>{descriptions}</p>
               </div>
             );
