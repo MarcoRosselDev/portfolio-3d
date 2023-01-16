@@ -4,6 +4,7 @@ import Home from "./components/home/Home";
 import Footer from "./components/footer/Fotter";
 import Skills from "./components/skills/Skills";
 import Contact from "./components/contact/Contact";
+import Portfolio from "./components/portfolio/Portfolio";
 import ScrollUp from "./components/scrollup/ScrollUp";
 import "./App.css";
 import "./components/header/header.css";
@@ -217,7 +218,7 @@ function App() {
         <Home mode={dark} />
         <About mode={dark} />
         <Skills mode={dark} />
-        {/* <Portfolio mode={dark} /> */}
+        <Portfolio mode={dark} />
         <Contact mode={dark} />
       </main>
 
