@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./portfolio.css";
 import data from "./data";
 
 const Portfolio = (dark) => {
+  const [projects, setProjects] = useState(data);
+  const [index, setIndex] = useState(0);
   return (
     <div className={`${dark.mode === true ? "portfolio__dark-mode" : ""}`}>
       <div id="portfolio" className="portfolio__container section container ">
         <h2 className="section__title">Portfolio</h2>
         <span className="section__subtitle">Last Projects</span>
         <div className="portfolio__container  grid">
-          <div className="portfolio__container portfolio__content">
-            <h1>hola</h1>
-          </div>
-          <div className="portfolio__container portfolio__content">
-            <h1>{`${data[0].title}`}</h1>
-          </div>
+          {projects.map((projects, projectsIndex) => {
+            const { id, image, title, descriptions, link, libraries } =
+              projects;
+
+            return (
+              <div className="portfolio__container portfolio__content">
+                <h1>{title}</h1>
+                <p>{descriptions}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
