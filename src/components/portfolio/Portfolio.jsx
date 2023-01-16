@@ -1,7 +1,5 @@
 import React from "react";
 import "./portfolio.css";
-import ProjectOne from "./ProjectOne";
-import ProjectTwo from "./ProjectTwo";
 
 const Portfolio = (dark) => {
   return (
