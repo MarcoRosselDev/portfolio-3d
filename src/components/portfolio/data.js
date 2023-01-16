@@ -1,4 +1,4 @@
-const projects = [
+export default [
   {
     id: 1,
     title: "Fitnes Page",

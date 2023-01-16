@@ -1,5 +1,6 @@
 import React from "react";
 import "./portfolio.css";
+import data from "./data";
 
 const Portfolio = (dark) => {
   return (
@@ -12,7 +13,7 @@ const Portfolio = (dark) => {
             <h1>hola</h1>
           </div>
           <div className="portfolio__container portfolio__content">
-            <h1>hola</h1>
+            <h1>`${data.title}`</h1>
           </div>
         </div>
       </div>
