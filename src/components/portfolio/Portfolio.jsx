@@ -13,7 +13,7 @@ const Portfolio = (dark) => {
             <h1>hola</h1>
           </div>
           <div className="portfolio__container portfolio__content">
-            <h1>`${data.title}`</h1>
+            <h1>{`${data[0].title}`}</h1>
           </div>
         </div>
       </div>
