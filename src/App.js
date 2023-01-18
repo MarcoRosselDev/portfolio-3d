@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import About from "./components/about/About";
-import Home from "./components/home/Home";
-import Footer from "./components/footer/Fotter";
-import Skills from "./components/skills/Skills";
-import Portfolio from "./components/portfolio/Portfolio";
-import Contact from "./components/contact/Contact";
-import ScrollUp from "./components/scrollup/ScrollUp";
 import "./App.css";
+import About from "./components/about/About";
+import Contact from "./components/contact/Contact";
+import Footer from "./components/footer/Footer";
+import Home from "./components/home/Home";
+import Portfolio from "./components/portfolio/Portfolio";
+import ScrollUp from "./components/scrollup/ScrollUp";
+import Skills from "./components/skills/Skills";
+// import Header from "./components/header/Header";
 import "./components/header/header.css";
 
 function App() {
@@ -22,15 +23,15 @@ function App() {
   const [activeNav, setActiveNav] = useState("#home");
 
   /*============= Dark mode ============= */
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(null);
 
   useEffect(() => {
-    const data = window.localStorage.getItem("darkmode1");
+    const data = window.localStorage.getItem("darkmode2");
     if (data !== null) setDark(JSON.parse(data));
   }, []);
 
   useEffect(() => {
-    window.localStorage.setItem("darkmode1", JSON.stringify(dark));
+    window.localStorage.setItem("darkmode2", JSON.stringify(dark));
   }, [dark]);
 
   return (
