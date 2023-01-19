@@ -23,15 +23,15 @@ function App() {
   const [activeNav, setActiveNav] = useState("#home");
 
   /*============= Dark mode ============= */
-  const [dark, setDark] = useState(null);
+  const [dark, setDark] = useState(false);
 
   useEffect(() => {
-    const data = window.localStorage.getItem("darkmode2");
+    const data = window.localStorage.getItem("darkmode1");
     if (data !== null) setDark(JSON.parse(data));
   }, []);
 
   useEffect(() => {
-    window.localStorage.setItem("darkmode2", JSON.stringify(dark));
+    window.localStorage.setItem("darkmode1", JSON.stringify(dark));
   }, [dark]);
 
   return (
