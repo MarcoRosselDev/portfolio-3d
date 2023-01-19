@@ -26,12 +26,15 @@ function App() {
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
-    const data = window.localStorage.getItem("darkmode1");
+    const data = window.localStorage.getItem("darkmodeMarcoRosselPortfolio");
     if (data !== null) setDark(JSON.parse(data));
   }, []);
 
   useEffect(() => {
-    window.localStorage.setItem("darkmode1", JSON.stringify(dark));
+    window.localStorage.setItem(
+      "darkmodeMarcoRosselPortfolio",
+      JSON.stringify(dark)
+    );
   }, [dark]);
 
   return (
